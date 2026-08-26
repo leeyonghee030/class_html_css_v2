@@ -1,0 +1,84 @@
+/* 1단계 :리셋 + 전역 스타일 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* 2단계 레이아웃 (큰틀) */
+header {
+  text-align: center;
+  /* 패딩 2개일떄 첫번쨰 위,아래 두번쨰 옆 */
+  padding: 40px 20px;
+  background-color: #6f4e37;
+  color: white;
+}
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.menu-grid {
+  display: flex;
+  gap: 20px;
+}
+
+/* 3단계 : 컴퍼넌트 스타일 */
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+
+  /* 세부조정 */
+  /* transform 변화를 0.2초에 걸쳐 적용 */
+  transition: transform 0.2s;
+}
+
+.card image {
+  width: 100%;
+  /* img 기본값은 inline -> 텍스트 취급으로 보기 떄문에
+  아래 3-4 px 자동으로 공백 발생 block으로 바꾸면 
+  공백이 사라지고 딱붙음 */
+  display: block;
+}
+
+.card-body {
+  padding: 16px;
+}
+
+.price {
+  /* span 기본은 inline이다 그래서 margin-top 값이 무시됨
+  inline-block은 옆에 붙으면서 margin-top도 붙음 */
+  display: inline-block;
+  margin-top: 10px;
+  color: #6f4e37;
+}
+
+/* 4단계 세부조정 */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
+}
+
+/*5단계 반응형 처리
+1. 뷰포트 설정이 되어있어야함
+2. @media (화면사이즈){} */
+@media (max-width: 768px) {
+  .menu-grid {
+    /*  가로 --> 새로방향으로 화면크기가 768px 보다 작을떄 적용*/
+    flex-direction: column;
+  }
+  .card {
+    flex: none;
+    width: 100%;
+  }
+}
