@@ -1,0 +1,18 @@
+/* 전체 코드 리셋+ 전역스타일설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  /* 사이즈,폰트설정 */
+  width: 100%;
+  color: #333;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* 2단계 레이아웃 나누기 */
+header {
+  text-align: center;
+  padding: 40px 20px;
+}

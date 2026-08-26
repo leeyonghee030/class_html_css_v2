@@ -1,0 +1,130 @@
+/* 1단계: 리셋 전역 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #141414;
+  color: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* 2단계부터는 컴퍼넌트 별 2-4단계 반복 */
+/* header영역 상단네비게이션 */
+/* 2단계 작성 레이아웃 */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* 헤더 3단계 컴퍼넌트 스타일 */
+.logo {
+  color: #e50914;
+  font-size: 28px;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  color: #ccc;
+  margin-left: 20px;
+  /* gap 대신 왜 마진을쓰는가? */
+  transition: color 0.3s ease;
+}
+
+/* 4단계 세부조정 */
+.navbar nav a:hover {
+  color: #fff;
+}
+
+/*hero 섹션 2-4단계 */
+.hero {
+  height: 60vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 30px;
+  /*  레이어1 -linear-gradient */
+  /* 그라디언트 : 둘이앗의 색상이 경계선 없이 자연스럽게 점진적으로 
+  변화하는 효과  
+  레이어2 실제 배걍사진
+  url() 이미지,center/cover
+  이미지 중심을 중앙 영역에 배치 
+  cover 비율 유지하며 영역에 꽉채움*/
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.8)),
+    url("https://picsum.photos/seed/netflex/1200/600") center/cover;
+}
+
+/* 3단계 컴퍼넌트 스타일 */
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.btn-play,
+.btn-info {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+/* 4단계 세부조정 넘어 */
+
+/* 4단계 가로 스크롤 영화리스트  */
+/* 2-4단계 */
+.movie-row {
+  padding: 30px;
+}
+
+.movie-list {
+  display: flex;
+  /* 영역에서 넘치면 가로 스크롤 튤바 생성
+   auto: 내용이 넘칠떄만 스크롤 바 표시(일반적) 
+   scroll : 내용이 없어도 항상 표시됨*/
+  overflow-x: auto;
+  /* y축으로 넘치는 부분은 잘려나감:대신 스크롤 불가*/
+  overflow-y: hidden;
+  gap: 10px;
+  padding: 15px 0px;
+}
+/* 3단계 컴퍼넌트 스타일 */
+
+.movie-row h2 {
+  font-size: 22px;
+}
+
+.movie-list img {
+  width: 150px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+/* 4단계 세부.ㅡ조정 */
+.movie-list img:hover {
+  transform: scale(1.1);
+}
+
+/* footer  2단계생략 */
+/* 3단계 컨퍼넌트 스타일 */
+footer {
+  padding: 20px 30px;
+  color: #ccc;
+}
+/* 4단계 세부조정 */
+
+/*  5단계 전체 반응형 처리 */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 20px;
+  }
+}
