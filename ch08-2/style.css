@@ -1,0 +1,138 @@
+/* css변수: 색상테마를 한곳에서관리
+:root 는 html요소를 가리키며, 여기 선언한 변수는
+모든 하위 요소가 물려받는다 */
+:root {
+  --apple-black: #000000;
+  --apple-gray: #86868b;
+  --apple-blue: #0071e3;
+  --apple-white: #f5f5f5;
+  --card-bg: #1d1d1f;
+
+  --header-height: 56px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+}
+body {
+  color: var(--apple-white);
+  background-color: var(--apple-black);
+}
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  height: var(--header-height);
+  align-items: center;
+  padding: 0 30px 0 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(9px);
+  /* 뒤내용을 10 만큼 흐리게만든다
+  반투명 배경색과 함께 쓰면 유리판 느낌이 난다 */
+  z-index: 100;
+  /* 다른 요소 위에 항상보이도록함
+  단 position이 지전된 요소에만 적용이 된다 */
+}
+
+.nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+.nav a {
+  color: var(--apple-gray);
+  margin-left: 25px;
+}
+.nav a:hover {
+  color: white;
+}
+
+main {
+  padding-top: var(--header-height);
+}
+
+.hero {
+  height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 56px;
+  margin-bottom: 15px;
+}
+.hero p {
+  font-size: 26px;
+  color: var(--apple-gray);
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+.btn {
+  padding: 12px 24px;
+  border-radius: 24px;
+  /* transition: opacity 0.3s ease; */
+}
+
+.btn-primary {
+  background-color: var(--apple-blue);
+  color: var(--apple-white);
+  margin-left: 15px;
+  transition: opacity 0.3s ease;
+}
+.btn-secindary {
+  color: var(--apple-blue);
+  border: 1px solid var(--apple-blue);
+  transition:
+    background-color,
+    color 0.3s ease;
+}
+
+.features {
+  padding: 80px 30px;
+  text-align: center;
+}
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.features h2 {
+  margin-bottom: 40px;
+  font-size: 36px;
+}
+.feature-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  font-size: 15px;
+  color: var(--apple-gray);
+}
+.feature-card {
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 16px;
+  text-align: center;
+  /* 현재 카드 폭을 지정하지않으면 text 길이에 따라서 
+  제각각 크기가 될수있다  */
+  flex: 0 1 260px;
+}
+
+.btn-primary:hover {
+  opacity: 0.1;
+}
+
+.btn-secindary:hover {
+  background-color: var(--apple-blue);
+  color: var(--apple-white);
+}

@@ -219,6 +219,6 @@ main {
 .nav,
 main,
 .bottom-nav {
-  max-width: 786px; /* 콘텐츠가 이 이상은 안 늘어남 */
-  margin: 0 auto; /* 남는 공간은 좌우로 균등하게, 가운데 정렬 */
+  max-width: 786px;
+  margin: 0 auto;
 }
