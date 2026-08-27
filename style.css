@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #f5f5f5;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 20px;
+  background-color: #0073e9;
+}
+/* 3단계 컴퍼넌트 스타일 */
+
+.logo {
+  color: white;
+  font-size: 24px;
+}
+.seatch-bar {
+  display: flex;
+  flex: 1;
+  margin-right: 10px;
+}
+.seatch-bar input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.seatch-bar button {
+  padding: 10px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* 컴퍼넌트 상품카드 */
+.section-title {
+  padding: 20px;
+  font-size: 20px;
+}
+
+.product-grid {
+  display: flex;
+  /* flex-wrap: wrap; */
+  padding: 0 20px;
+  gap: 16px;
+}
+
+.product-card {
+  width: calc((100%- 32px) / 3);
+  /* calc  한줄에 3개를 넣으려면 카드사이간견
+  2개를 계산해 전체 촉에서 사이간격을 뺀 뒤 3으로 나눈다 */
+  /* display: flex;
+  flex-direction: column; */
+}
+
+/* 3단계 컴퍼넌트 스타일  */
+.product-card {
+  background-color: white;
+  border-radius: 4px;
+  padding: 15px;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+  /* tip : 이미지에 요소 inline 이다
+  아래에 미세한 여백이 생긴다. */
+}
+.product-card h3 {
+  font-size: 14px;
+  margin: 10px 0 5px 0;
+}
+/* 컴퍼넌트 가격영역 */
+.price-original {
+  text-decoration: line-through;
+  color: #999;
+  font-size: 13px;
+}
+.price-sale {
+  font-size: 18px;
+  font-weight: bold;
+  color: #111;
+}
+.discount {
+  color: #ff0000;
+}
+.rating {
+  color: #ff9500;
+  font-size: 13px;
+}
+.delivery {
+  color: #0073e9;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.product-card {
+  position: relative;
+}
+.badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.badge-rocket {
+  background-color: #0073e9;
+  color: white;
+}
+.badge-sale {
+  top: 45px;
+  background-color: red;
+  color: white;
+}
+
+/*  4단계 세부조정 */
+.product-card {
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
