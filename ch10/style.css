@@ -1,0 +1,247 @@
+:root {
+  /* 글자 크기 */
+  --fs-blog: 32px;
+  --fs-title: 20px;
+  --fs-body: 15px;
+  --fs-card: 14px;
+  --fs-meta: 13px;
+  --fs-nav: 13px;
+
+  /* 간격 (4의 배수) */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-12: 48px;
+
+  /* 레이아웃 치수 */
+  --layout-width: 1000px;
+  --sidebar-width: 170px;
+  --content-width: 730px;
+  --gap-2col: 40px;
+  --gap-card: 20px;
+  --header-height: 120px;
+  --radius-sm: 4px;
+  --radius-lg: 8px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: white;
+  color: black;
+  position: relative;
+}
+.gb-side {
+  position: sticky;
+  top: 10px;
+}
+
+.gb-header {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  background-color: #d2d8d8;
+  justify-content: space-between;
+}
+.gb-header {
+  min-width: 1000px;
+  position: relative;
+}
+.bebge-icon {
+  position: absolute;
+  top: 5px;
+  right: 755px;
+  font-size: 25px;
+  cursor: pointer;
+}
+.gb-header h1 {
+  cursor: pointer;
+}
+.sns {
+  margin-right: 30px;
+}
+.sns a {
+  margin-right: 5px;
+  text-decoration: none;
+  font-size: 30px;
+}
+.gb-main {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  padding: 30px;
+  gap: 30px;
+}
+.gb-side {
+  min-width: 170px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #c2c2c2;
+  border-radius: 10px;
+  padding: 10px;
+  margin-top: 10px;
+}
+#icon {
+  font-size: 20px;
+}
+.side-box p {
+  color: #c2c2c2;
+  font-size: 13px;
+}
+
+.side-heaber {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.side-heaber h3 {
+  font-size: 14px;
+  color: #c2c2c2;
+}
+
+.side-box .side-box-p {
+  color: black;
+  font-size: 14px;
+  font-weight: bold;
+}
+.side-box {
+  position: relative;
+}
+.side-bedge-span {
+  position: absolute;
+  top: 78px;
+  right: 60px;
+  padding: 0 3px 0 3px;
+  background-color: #ff7b3c;
+  font-size: 11px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3px;
+  border: 1px solid #c2c2c2;
+}
+
+.content-gird {
+  display: flex;
+  flex-direction: column;
+  width: 730px;
+}
+.main-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.main-header p {
+  font-weight: bold;
+}
+.main-header-span {
+  display: inline-block;
+  color: #5dd4d9;
+  margin-left: 5px;
+}
+.main-header-icon {
+  font-size: 25px;
+}
+.content-box {
+  display: flex;
+  gap: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+  margin-bottom: 30px;
+}
+.main-content {
+  width: 730px;
+}
+
+.card img {
+  margin-bottom: 10px;
+}
+.card p {
+  margin-bottom: 30px;
+}
+
+.page {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.page span {
+  display: inline-block;
+}
+
+.bebge-icon,
+.icon-y,
+.icon-i,
+#icon,
+.main-header-icon {
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.bebge-icon:hover,
+.icon-y:hover,
+.icon-i:hover,
+#icon:hover,
+.main-header-icon:hover {
+  transform: scale(1.2);
+}
+.icon-y,
+.icon-i {
+  display: inline-block;
+}
+.card {
+  transition: transform 0.6s ease-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-info {
+  transition: color 0.6s ease-out;
+}
+.card:hover .card-info {
+  color: #5dd4d9;
+}
+.page-numbers {
+  display: inline-block;
+  font-size: 18px;
+  margin-right: 10px;
+}
+.page-num1:hover,
+.page-num2:hover,
+.page-num3:hover,
+.page-num4:hover,
+.page-num5:hover,
+.page-num6:hover,
+.page-num7:hover,
+.page-num8:hover,
+.page-num9:hover,
+.page-num10:hover {
+  cursor: pointer;
+  color: #5dd4d9;
+}
+.page-btn1,
+.page-btn2 {
+  display: inline-block;
+}
+.page-btn1:hover,
+.page-btn2:hover {
+  cursor: pointer;
+  color: #5dd4d9;
+}
