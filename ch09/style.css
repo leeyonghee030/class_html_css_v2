@@ -1,0 +1,184 @@
+:root {
+  --gh-dark: #0d1117;
+  --gh-card: #161b22;
+  --gh-blue: #58a6ff;
+  --gh-border: #30363d;
+  --gh-text: #c9d1d9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--gh-dark);
+  color: var(--gh-text);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* 컴퍼넌트 헤더 */
+.gh-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  gap: 20px;
+  background-color: var(--gh-card);
+  border-bottom: 1px solid var(--gh-border);
+}
+.gh-logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+}
+.gh-search {
+  flex: 1;
+  max-width: 400px;
+  padding: 8px;
+  background-color: var(--gh-dark);
+  border: 1px solid var(--gh-border);
+  border-radius: 6px;
+  color: rgb(190, 55, 55);
+}
+
+.profile-layout {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 24px;
+}
+
+.sideber {
+  flex: 0 0 300px;
+}
+.main-content {
+  flex: 1;
+}
+.avatar {
+  width: 200px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 1px solid var(--gh-border);
+  margin: 0 auto;
+}
+
+.sideber h2 {
+  color: white;
+  margin-bottom: 5px;
+}
+.username {
+  color: var(--gh-blue);
+}
+.sideber p strong {
+  color: white;
+}
+.biography {
+  line-height: 1.5;
+}
+.sideber p {
+  margin-bottom: 10px;
+}
+.follow-info {
+  font-size: 14px;
+}
+.skills-badge {
+  /*inline-block 안하면 span은 마진안먹음  */
+  display: inline-block;
+  margin-top: 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 4px 10px;
+  border-radius: 15px;
+}
+.skills-badge.html {
+  background-color: #e34f26;
+  color: white;
+}
+.skills-badge.css {
+  background-color: #1572b6;
+  color: white;
+}
+.skills-badge.js {
+  background-color: #f7df1e;
+  color: var(--gh-dark);
+}
+
+/* section */
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content h3 {
+  color: white;
+  margin: 20px 0 10px;
+  font-size: 18px;
+}
+
+.grass-grid {
+  display: flex;
+  max-width: 87px;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin: 15px 0;
+}
+.grass {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.level-0 {
+  background-color: var(--gh-card);
+}
+.level-1 {
+  background-color: #0e4429;
+}
+.level-2 {
+  background-color: #39d353;
+}
+.repo-card {
+  border: 1px solid var(--gh-border);
+  padding: 16px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.repo-card a {
+  color: var(--gh-blue);
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 12px;
+}
+.card-info {
+  margin: 10px 0;
+}
+.lang-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.js-dot {
+  background-color: #f7df1e;
+}
+.html-dot {
+  background-color: #e34f26;
+}
+.repo-meta span {
+  display: inline-block;
+  margin-right: 10px;
+}
+.meta-span {
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .profile-layout {
+    flex-direction: column;
+  }
+}

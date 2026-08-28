@@ -194,12 +194,13 @@ main {
   font-weight: bold;
   color: rgb(114, 19, 165);
 }
-.bottom-nav {
-  display: flex;
-  justify-content: space-around; /* 5개 항목 균등 배치 */
-  align-items: center;
-  padding: 8px 0;
-  border-top: 1px solid #eee;
+.botton-nav {
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
 .nav-item {
@@ -216,9 +217,9 @@ main {
   font-size: 20px;
 }
 .header,
+.botton-nav,
 .nav,
-main,
-.bottom-nav {
+main {
   max-width: 786px;
   margin: 0 auto;
 }
