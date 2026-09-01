@@ -1,0 +1,270 @@
+:root {
+  --sp-black: #121212;
+  --sp-dark: #181818;
+  --sp-gray: #282828;
+  --sp-light: #b3b3b3;
+  --sp-green: #1db954;
+  --sp-white: #ffffff;
+
+  /* 플레이어 높이를 변수로 뺀다.
+     사이드바와 메인의 높이 계산에 세 번 쓰이므로,
+     숫자를 직접 적으면 하나만 고쳐도 레이아웃이 깨진다 */
+  --player-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--sp-white);
+}
+body {
+  background-color: var(--sp-black);
+  /* 문서 전체 스크롤을 막는다 */
+  /* overflow: hidden; */
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+a {
+  text-decoration: none;
+  color: var(--sp-light);
+}
+
+/* 레이아웃잡기 사이드바 +메인 */
+.app-layout {
+  display: flex;
+  /* 하단플레이어 영역의 높이를 빼고 계산해야한다 
+  이 높이가 있어야 안에 컨텐트들이 넘침을 판단할수있다  */
+  height: calc(100vh - var(--player-height));
+  overflow-y: auto;
+}
+
+.palyer-list,
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 240px;
+  padding: 20px;
+  /* 부모 컨텐이너에 높이를 100% 물려준다 */
+  height: 100%;
+  /* 내용이 넘치면 이안에서만 세로 스크롤이 생성된다 */
+  overflow-y: auto;
+}
+.main-content {
+  flex: 1;
+  background: linear-gradient(var(--sp-dark), var(--sp-black));
+  height: 100%;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* 상세 꾸미기 사이드바  */
+.logo {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.nav-item {
+  display: block;
+  padding: 10px 0;
+  font-size: 14px;
+  color: var(--sp-light);
+}
+.active {
+  color: var(--sp-white);
+}
+.palyer-list {
+  border-top: 1px solid var(--sp-gray);
+  padding-top: 20px;
+}
+.palyer-list h3 {
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 15px;
+  /* 글자 사이의 간격 (자간) */
+  letter-spacing: 1px;
+}
+.player-list-item {
+  font-weight: 300;
+  padding: 6px 0;
+  font-size: 14px;
+  /* 줄과 중사이의 높이  */
+  /* line-height: 10px; */
+}
+/*  main - content 2단계 레이아웃 */
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.album-card {
+  flex: 1 1 160px;
+  max-width: 200px;
+}
+/* 3단계 컨퍼넌트 스타일 */
+.main-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.album-card {
+  background-color: var(--sp-gray);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.album-card img {
+  width: 100%;
+  /* 가로 세로 비율을 1:1로 고정 */
+  aspect-ratio: 1;
+  /* 비율을 유지하면 영역에 꽉 채우고 넘치는 부분을 잘라냄 */
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+  margin-bottom: 10px;
+}
+.album-card h4 {
+  font-size: 14px;
+  margin-bottom: 4px;
+  /* 제목이 길면 한줄로 자르고 말줄임표를 붙힌다 */
+  /* 아래 세 속성이 함꼐 있어야 동작한다 */
+  white-space: nowrap;
+  /* 두줄에서  한줄로변힘 */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* 중요!! */
+}
+.album-card p {
+  font-size: 12px;
+  color: var(--sp-light);
+}
+
+/* player 컴포넌트 하단 고정바  */
+/* 2단계 레이아웃 */
+.player {
+  height: var(--player-height);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background-color: var(--sp-dark);
+  border-top: 1px solid var(--sp-gray);
+  z-index: 100;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 20 px;
+}
+
+.player-info {
+  flex: 0 0 220px;
+}
+.player-contrls {
+  flex: 0 0 auto;
+}
+.player-bar {
+  flex: 1;
+}
+/* 컴퍼넌트 스타일  */
+
+.player-info {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+}
+.player-info img {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.song-artist {
+  font-size: 12px;
+  color: var(--sp-light);
+}
+
+.player-contrls button {
+  background: none;
+  border: none;
+  color: var(--sp-light);
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.player-bar {
+  align-items: center;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--sp-gray);
+}
+.player-progress {
+  width: 30%;
+  height: 100%;
+  background-color: var(--sp-green);
+  border-radius: 2px;
+}
+
+/* 4단계 세부 조정  */
+.player-bar {
+  transition: height 0.3s ease;
+  cursor: pointer;
+}
+.player-bar:hover {
+  height: 10px;
+}
+
+.player-contrls button {
+  transition: color 0.3 ease;
+}
+
+.player-contrls button:hover {
+  color: var(--sp-white);
+}
+
+.play-btn {
+  transition: transform 0.3 ease;
+}
+.play-btn:hover {
+  transform: scale(1.3);
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+  .main-content {
+    padding: 20px;
+  }
+  .main-content h2 {
+    font-size: 22px;
+  }
+  .album-card {
+    flex: 1 1 140px;
+    max-width: none;
+  }
+  .player-info {
+    flex: 1 1 auto;
+  }
+  .player-bar {
+    /* 좁은화면에서 진행바가 아주 작아보인다 
+    그래서 화면 아래로 위치를 조정하자  */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    border-radius: 0;
+  }
+  .player {
+    position: fixed;
+  }
+}

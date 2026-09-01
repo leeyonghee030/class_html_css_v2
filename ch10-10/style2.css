@@ -1,0 +1,88 @@
+/* 1단계 root + 기본 리셋 +body 설정 */
+:root {
+  --sp-black: #121212;
+  --sp-dark: #181818;
+  --sp-gray: #282828;
+  --sp-light: #b3b3b3;
+  --sp-green: #1db954;
+  --sp-white: #ffffff;
+
+  /* 플레이어 높이를 변수로 뺀다.
+     사이드바와 메인의 높이 계산에 세 번 쓰이므로,
+     숫자를 직접 적으면 하나만 고쳐도 레이아웃이 깨진다 */
+  --player-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--sp-black);
+  color: var(--sp-white);
+  font-family:
+    "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  overflow-y: hidden;
+}
+a {
+  text-decoration: none;
+  color: var(--sp-light);
+  display: block;
+}
+/* 2단계 레이아웃 설정  */
+/* 전체 레이아웃 잡고 전체적으로 상세 하게 컨퍼넌트 잡기  */
+.app-layout {
+  display: flex;
+  height: calc(100vh - var(--player-height));
+  overflow-y: auto;
+}
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 220px;
+  padding: 20px;
+  height: 100%;
+  /* 스크롤  */
+  overflow-y: auto;
+}
+
+.main-content {
+  flex: 1;
+  height: 100%;
+  overflow-y: auto;
+  padding: 30px;
+}
+.album-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.album-card {
+  flex: 1 1 160px;
+  max-width: 200px;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: var(--player-height);
+  width: 100%;
+
+  background-color: var(--sp-dark);
+  border-top: 1px solid var(--sp-gray);
+  align-items: center;
+
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  z-index: 100;
+}
+
+.player-info {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
