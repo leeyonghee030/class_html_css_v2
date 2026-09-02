@@ -7,138 +7,203 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <div class="header-logo">
-        <a class="logo" href="#"
-          ><img
-            class="logo-img"
-            src="https://tse-mm.bing.com/th?q=%EC%98%AC%EB%A6%AC%EB%B8%8C+%EC%98%81+%EB%A1%9C%EA%B3%A0%20app"
-            alt=""
-          />
-          <h1>올리브영</h1></a
-        >
-        <a class="logo-a" href="#"><p>헬스+</p></a>
-      </div>
-      <div class="header-nav">
-        <button>🔍</button>
-        <button>🔔</button>
-        <button>🛍️</button>
-      </div>
-    </header>
-    <nav class="nav">
-      <a href="#">홈</a>
-      <a href="#">오특</a>
-      <a href="#">랭킹</a>
-      <a href="#">매거진</a>
-      <a href="#">LUXE EDIT</a>
-      <div class="badge">
-        <a href="">세일</a>
-        <span class="badge badge-sale">🟠</span>
-      </div>
-      <a href="">기획전</a>
-    </nav>
-    <main>
-      <div class="hero">
-        <img
-          class="hero-img"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQitkt_QW3lSbnUIrICvQb6qEYSG1apxOniM4vg-8VtZA&s=10"
-          alt=""
-        />
-        <div class="hero-badge">
-          <span class="badge-span"
-            >10 | 15 <button class="badge-button">+</button></span
-          >
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="account">
+          <span class="account-span">A</span>
+          <h2 class="account-name">Admin</h2>
         </div>
-      </div>
-      <nav class="hero-nav">
-        <div class="hero-nav-img">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero/50/50" alt="" />
-            <p>W케어</p>
-          </a>
-        </div>
-        <div class="hero-nav-img hero-nav-badge">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero1/50/50" alt="" />
-            <p>건기식찾기</p>
-            <span class="hero-badge-span">N</span>
-          </a>
-        </div>
-        <div class="hero-nav-img">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero3/50/50" alt="" />
-            <p>라이브</p>
-          </a>
-        </div>
-        <div class="hero-nav-img">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero4/50/50" alt="" />
-            <p>선물하기</p>
-          </a>
-        </div>
-        <div class="hero-nav-img">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero5/50/50" alt="" />
-            <p>올영매장</p>
-          </a>
-        </div>
-        <div class="hero-nav-img">
-          <a href="#">
-            <img src="https://picsum.photos/seed/hero6/50/50" alt="" />
-            <p>멤버십/쿠폰</p>
-          </a>
-        </div>
-      </nav>
-      <div class="section-title">
-        <h3>고객을 위한 인기상품</h3>
-        <p>AD</p>
-      </div>
-      <section class="product-grid">
-        <div class="product-card product-badge">
-          <img src="https://picsum.photos/seed/hero7/100/100" alt="" />
-          <p>[5.14하루특자/진정장벽]</p>
-          <p>진정팩</p>
-          <div class="product-badge-pick">
-            <span>올영</span>
-            <span class="pick">PICK</span>
+        <div class="menu-group">
+          <p class="category-title">메인</p>
+          <div class="menu-list">
+            <p class="choice">대시보드</p>
+            <p>주문 관리</p>
+            <p>상품 관리</p>
           </div>
-          <span class="product-badge-span"
-            >5<span class="badge-font">매</span></span
-          >
         </div>
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/hero8/100/100" alt="" />
-          <p>[모공세정]아렌시아떡솦</p>
-          <p>진정팩</p>
+        <div class="menu-group">
+          <p class="category-title">고객</p>
+          <div class="menu-list">
+            <p>회원 관리</p>
+            <p>문의 내역</p>
+          </div>
         </div>
-        <div class="product-card">
-          <img src="https://picsum.photos/seed/hero9/100/100" alt="" />
-          <p>[1등로션]아렌시아떡솦</p>
-          <p>진정팩</p>
+        <div class="menu-group">
+          <p class="category-title">기타</p>
+          <div class="menu-list">
+            <p>통계</p>
+            <p>설정</p>
+          </div>
         </div>
-      </section>
-    </main>
-    <nav class="botton-nav">
-      <a href="#" class="nav-item">
-        <span class="icon">☰</span>
-        <span class="label">카테고리</span>
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">📷</span>
-        <span class="label">셔터</span>
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">🏠</span>
-        <span class="label">홈</span>
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">🕘</span>
-        <span class="label">히스토리</span>
-      </a>
-      <a href="#" class="nav-item">
-        <span class="icon">👤</span>
-        <span class="label">마이</span>
-      </a>
-    </nav>
+      </aside>
+      <main class="main-content">
+        <div class="topbar">
+          <input
+            class="topbar-input"
+            type="text"
+            placeholder="주문번호, 상품명 검색"
+          />
+          <div class="user">
+            <span class="user-icon">김</span>
+            <span class="user-name">김관리</span>
+          </div>
+        </div>
+        <div class="main-page">
+          <div class="page">
+            <div class="page-header">
+              <h4 class="header-title">대시 보드</h4>
+              <p>2026년 4월 13일 기준</p>
+            </div>
+          </div>
+          <div class="statistics-card">
+            <div class="card">
+              <p class="card-title">오늘 매출</p>
+              <p class="card-main">2,847,000원</p>
+              <p class="daily-change">전일 대비 +12.5%</p>
+            </div>
+            <div class="card">
+              <p class="card-title">신규 주문</p>
+              <p class="card-main">128건</p>
+              <p class="daily-change">전일 대비 +8.2%</p>
+            </div>
+            <div class="card">
+              <p class="card-title">신규 회원</p>
+              <p class="card-main">34명</p>
+              <p class="daily-change minus">전일 대비 -3.1%</p>
+            </div>
+            <div class="card">
+              <p class="card-title">방문자</p>
+              <p class="card-main">5,241명</p>
+              <p class="daily-change">전일 대비 +21.7%</p>
+            </div>
+          </div>
+          <div class="orderList">
+            <h4 class="orderList-title">최근 주문</h4>
+            <ul class="order-list">
+              <li class="order-row order-row-head">
+                <span class="col-id">주문번호</span>
+                <span class="col-customer">고객</span>
+                <span class="col-product">상품</span>
+                <span class="col-price">금액</span>
+                <span class="col-status">상태</span>
+              </li>
+              <li class="order-row">
+                <span class="col-id">#20260413-001</span>
+                <span class="col-customer">이영희</span>
+                <span class="col-product">무선 블루투스 이어폰</span>
+                <span class="col-price">29,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-end">배송완료</span></span
+                >
+              </li>
+              <li class="order-row">
+                <span class="col-id">#20260413-002</span>
+                <span class="col-customer">박지훈</span>
+                <span class="col-product">스테인리스 텀블러</span>
+                <span class="col-price">15,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-ing">배송중</span></span
+                >
+              </li>
+              <li class="order-row">
+                <span class="col-id">#20260413-003</span>
+                <span class="col-customer">최민수</span>
+                <span class="col-product">휴대용 보조배터리</span>
+                <span class="col-price">22,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-waiting">결제대기</span></span
+                >
+              </li>
+              <li class="order-row">
+                <span class="col-id">#20260413-004</span>
+                <span class="col-customer">정하늘</span>
+                <span class="col-product">기계식 키보드</span>
+                <span class="col-price">89,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-cancel">취소</span></span
+                >
+              </li>
+              <li class="order-row">
+                <span class="col-id">#20260413-005</span>
+                <span class="col-customer">강수진</span>
+                <span class="col-product">모니터 받침대</span>
+                <span class="col-price">34,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-end">배송완료</span></span
+                >
+              </li>
+              <li class="order-row last-row">
+                <span class="col-id">#20260413-006</span>
+                <span class="col-customer">윤태호</span>
+                <span class="col-product">USB-C 허브</span>
+                <span class="col-price">41,900원</span>
+                <span class="col-status"
+                  ><span class="badge order-ing">배송중</span></span
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="last-list">
+            <div class="weekly-sales">
+              <p class="week-title">주간매출</p>
+              <div class="week">
+                <div class="day">
+                  <p class="bar bar1"></p>
+                  <p>월</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar2"></p>
+                  <p>화</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar3"></p>
+                  <p>수</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar4"></p>
+                  <p>목</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar5"></p>
+                  <p>금</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar6"></p>
+                  <p>토</p>
+                </div>
+                <div class="day">
+                  <p class="bar bar7"></p>
+                  <p>일</p>
+                </div>
+              </div>
+            </div>
+            <div class="recent-activities">
+              <p class="recent-title">최근활동</p>
+              <div class="recent-box box1">
+                <p class="box-icon">이</p>
+                <div box>
+                  <p class="box-title">이영희님이 주문했습니다</p>
+                  <p class="box-p">3분 전</p>
+                </div>
+              </div>
+              <div class="recent-box box1">
+                <p class="box-icon">박</p>
+                <div box>
+                  <p class="box-title">박지훈님이 주문했습니다</p>
+                  <p class="box-p">12분 전</p>
+                </div>
+              </div>
+              <div class="recent-box">
+                <p class="box-icon">최</p>
+                <div box>
+                  <p class="box-title">최영희님이 주문했습니다</p>
+                  <p class="box-p">28분 전</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
